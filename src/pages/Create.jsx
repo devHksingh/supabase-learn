@@ -2,7 +2,7 @@
 
 const Create = () => {
   return (
-    <div>
+    <div className="page create">
         <h1>Create</h1>
     </div>
   )
