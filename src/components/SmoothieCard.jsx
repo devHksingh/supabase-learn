@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Pencil,Trash } from 'lucide-react';
 import supabase from '../config/supabaseClient'
 
-function SmoothieCard({ smoothie }) {
+function SmoothieCard({ smoothie,onDelete }) {
   
     console.log('smoothie :',smoothie);
     const handleDelete = async()=>{
@@ -17,7 +17,7 @@ function SmoothieCard({ smoothie }) {
     }
     if(data){
       console.log('deleted data',data);
-
+      onDelete(smoothie.id)
     }
 
     }
